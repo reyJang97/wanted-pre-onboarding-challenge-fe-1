@@ -3,10 +3,10 @@ import { Controller } from "react-hook-form";
 import { Input } from "antd";
 import { ErrorMessage } from "@hookform/error-message";
 
-function InputField({ control, errors }) {
+function InputField({ control, errors, label }) {
   return (
     <section>
-      <label htmlFor="email">email</label>
+      <label htmlFor="email">{label}</label>
       <Controller
         control={control}
         name="email"

@@ -4,10 +4,10 @@ import { Input } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { ErrorMessage } from "@hookform/error-message";
 
-function PasswordField({ control, errors }) {
+function PasswordField({ control, errors, label }) {
   return (
     <section>
-      <label htmlFor="password">password</label>
+      <label htmlFor="password">{label}</label>
       <Controller
         control={control}
         name="password"
