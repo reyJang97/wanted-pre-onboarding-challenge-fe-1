@@ -33,8 +33,11 @@ function SignUp() {
         "http://localhost:8080/users/create",
         userData
       );
-      alert(res.data.message);
-      navigate("/");
+      if (res.statusText === "OK") {
+        alert(res.data.message);
+        localStorage.setItem("token", res.data.token);
+        navigate("/");
+      }
     } catch (error) {
       alert(error);
     }
